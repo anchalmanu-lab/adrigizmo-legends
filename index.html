@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrigizmo Legends Club</title>
+    <title>Adrigizmo Legends Club | Exclusive Community</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #030712;
-            --card-bg: rgba(17, 24, 39, 0.85);
-            --border-color: rgba(255, 255, 255, 0.1);
+            --bg-color: #020617;
+            --card-bg: rgba(15, 23, 42, 0.75);
+            --border-color: rgba(255, 255, 255, 0.08);
             --accent-gold: #f59e0b;
             --accent-blue: #38bdf8;
             --accent-green: #10b981;
-            --text-main: #f9fafb;
-            --text-muted: #9ca3af;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
         }
 
         * {
@@ -29,8 +29,8 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             background-image: 
-                radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 90% 90%, rgba(245, 158, 11, 0.05) 0%, transparent 40%);
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.08) 0%, transparent 45%);
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -38,73 +38,87 @@
         .site-wrapper {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 30px 20px;
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 30px;
         }
 
         .section-box {
             background: var(--card-bg);
-            backdrop-filter: blur(16px);
+            backdrop-filter: blur(20px);
             border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            border-radius: 28px;
+            padding: 45px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 0.8s ease forwards;
         }
 
         .section-box:nth-child(1) { animation-delay: 0.1s; }
-        .section-box:nth-child(2) { animation-delay: 0.3s; }
-        .section-box:nth-child(3) { animation-delay: 0.5s; }
-        .section-box:nth-child(4) { animation-delay: 0.7s; }
-        .section-box:nth-child(5) { animation-delay: 0.9s; }
+        .section-box:nth-child(2) { animation-delay: 0.2s; }
+        .section-box:nth-child(3) { animation-delay: 0.3s; }
+        .section-box:nth-child(4) { animation-delay: 0.4s; }
+        .section-box:nth-child(5) { animation-delay: 0.5s; }
 
         @keyframes fadeInUp {
             to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
-            .section-box { padding: 20px; border-radius: 16px; }
+            .section-box { padding: 25px; border-radius: 20px; }
         }
 
         .badge {
             display: inline-block;
-            background: rgba(245, 158, 11, 0.1);
+            background: rgba(245, 158, 11, 0.12);
             color: var(--accent-gold);
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-bottom: 15px;
+            letter-spacing: 1.8px;
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 18px;
             border: 1px solid rgba(245, 158, 11, 0.3);
         }
 
         h2 {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #ffffff 30%, #9ca3af 100%);
+            letter-spacing: -0.8px;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         p {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 15px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .malayalam-box {
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px;
+            border-radius: 0 16px 16px 0;
+            margin: 20px 0;
+        }
+
+        .malayalam-box p {
+            color: #cbd5e1;
+            font-size: 16px;
+            margin-bottom: 0;
         }
 
         .grid-2 {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 30px;
+            gap: 35px;
             align-items: center;
         }
 
@@ -114,46 +128,49 @@
 
         .section-img {
             width: 100%;
-            height: 260px;
+            height: 280px;
             object-fit: cover;
-            border-radius: 14px;
+            border-radius: 16px;
             border: 1px solid var(--border-color);
             transition: transform 0.4s ease;
         }
-        .section-img:hover { transform: scale(1.02); }
+        .section-img:hover { transform: scale(1.03); }
 
         .pricing-flex {
             display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        @media (max-width: 500px) {
+            .pricing-flex { flex-direction: column; }
         }
         .price-card {
             flex: 1;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
-            padding: 18px;
-            border-radius: 14px;
+            padding: 22px;
+            border-radius: 16px;
             text-align: center;
         }
         .price-card.highlight { 
-            border-color: rgba(245, 158, 11, 0.4); 
-            background: rgba(245, 158, 11, 0.03); 
+            border-color: rgba(245, 158, 11, 0.5); 
+            background: rgba(245, 158, 11, 0.04); 
         }
         .price-label { 
             font-size: 12px; 
             color: var(--text-muted); 
             text-transform: uppercase; 
-            margin-bottom: 8px; 
-            font-weight: 600; 
+            margin-bottom: 10px; 
+            font-weight: 700; 
         }
         .original-price {
-            font-size: 14px;
+            font-size: 15px;
             color: #ef4444;
             text-decoration: line-through;
-            margin-right: 8px;
+            margin-right: 10px;
         }
         .offer-price { 
-            font-size: 22px; 
+            font-size: 24px; 
             font-weight: 800; 
             color: var(--text-main); 
         }
@@ -161,47 +178,60 @@
             color: var(--accent-gold); 
         }
 
+        .criteria-box {
+            display: flex;
+            gap: 15px;
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 16px 20px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            align-items: center;
+        }
+        .criteria-box span { font-size: 24px; }
+        .criteria-box p { margin-bottom: 0; color: #fca5a5; font-size: 14px; }
+
         .benefits-list {
             list-style: none;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
         .benefits-list li {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
-            padding: 12px 16px;
-            border-radius: 10px;
-            font-size: 13px;
-            color: #e5e7eb;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #e2e8f0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
-        .benefits-list li span { color: var(--accent-blue); font-weight: bold; }
+        .benefits-list li span { color: var(--accent-blue); font-weight: bold; font-size: 16px; }
 
         .action-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
         .btn {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             width: 100%;
-            padding: 15px;
-            font-size: 15px;
+            padding: 16px;
+            font-size: 16px;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 14px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.4);
         }
         .btn-green { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
-        .btn-green:hover { background: linear-gradient(135deg, #059669 100%, #047857 100%); transform: translateY(-2px); }
+        .btn-green:hover { background: linear-gradient(135deg, #059669 0%, #047857 100%); transform: translateY(-2px); }
         .btn-blue { background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); color: white; }
         .btn-blue:hover { background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%); transform: translateY(-2px); }
         .btn-whatsapp { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; }
@@ -209,22 +239,22 @@
 
         .notice-box {
             background: rgba(245, 158, 11, 0.06);
-            border: 1px solid rgba(245, 158, 11, 0.2);
-            padding: 12px 16px;
-            border-radius: 12px;
-            font-size: 13px;
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            padding: 14px 18px;
+            border-radius: 14px;
+            font-size: 14px;
             color: #fde68a;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         /* POPUP */
         .popup-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(8px);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
             display: flex; justify-content: center; align-items: center;
             z-index: 1000;
             animation: fadeInPopup 0.5s ease;
@@ -232,29 +262,29 @@
         @keyframes fadeInPopup { from { opacity: 0; } to { opacity: 1; } }
 
         .popup-card {
-            background: #111827;
+            background: #0f172a;
             border: 1px solid var(--accent-gold);
-            border-radius: 20px;
-            padding: 30px;
-            max-width: 450px;
+            border-radius: 24px;
+            padding: 35px;
+            max-width: 480px;
             width: 90%;
             text-align: center;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.9);
             position: relative;
         }
         .close-popup {
-            position: absolute; top: 15px; right: 20px;
-            font-size: 20px; color: var(--text-muted); cursor: pointer;
+            position: absolute; top: 18px; right: 22px;
+            font-size: 22px; color: var(--text-muted); cursor: pointer;
             background: none; border: none;
         }
         .close-popup:hover { color: white; }
 
         .floating-wa {
-            position: fixed; bottom: 20px; right: 20px;
+            position: fixed; bottom: 25px; right: 25px;
             background: #25D366; color: white;
-            width: 55px; height: 55px; border-radius: 50%;
+            width: 60px; height: 60px; border-radius: 50%;
             display: flex; justify-content: center; align-items: center;
-            font-size: 28px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            font-size: 30px; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
             z-index: 100; text-decoration: none; transition: transform 0.3s ease;
         }
         .floating-wa:hover { transform: scale(1.1); }
@@ -268,8 +298,8 @@
             <button class="close-popup" onclick="closePopup()">×</button>
             <span class="badge">Exclusive Giveaway</span>
             <h2>Meta Quest 3 Lucky Draw!</h2>
-            <p>Lucky draws and <strong>Meta Quest 3</strong> rewards are exclusively available only for valid digital cardholders! Send your payment screenshot to claim your card.</p>
-            <button class="btn btn-blue" onclick="closePopup()" style="margin-top: 15px;">Explore Club Details</button>
+            <p>ലക്കി ഡ്രോയിലൂടെ <strong>Meta Quest 3</strong> സമ്മാനം നേടാൻ വാലിഡായ ഡിജിറ്റൽ കാർഡുള്ള അംഗങ്ങൾക്ക് മാത്രമാണ് അവസരം. നിങ്ങളുടെ പേയ്‌മെൻ്റ് സ്ക്രീൻഷോട്ട് അയച്ച് ഉടൻ കാർഡ് സ്വന്തമാക്കൂ!</p>
+            <button class="btn btn-blue" onclick="closePopup()" style="margin-top: 15px;">ക്ലബ്ബ് വിശദാംശങ്ങൾ കാണുക</button>
         </div>
     </div>
 
@@ -282,6 +312,17 @@
             <p>
                 Adrigizmo Legends Club is an exclusive private community dedicated to personal growth, integrating skill development, career mentorship, premium online tools, and educational resources. Admitting members only after verification, we foster a supportive environment of knowledge sharing and friendship.
             </p>
+
+            <!-- Malayalam Section Added -->
+            <div class="malayalam-box">
+                <p>അഡ്രിഗിസ്മോ ലെജൻഡ്സ് ക്ലബ്ബിലേക്ക് സ്വാഗതം! വ്യക്തിഗത വളർച്ചയും കരിയർ വികസനവും ലക്ഷ്യമിട്ട് പ്രവർത്തിക്കുന്ന ഈ പ്രൈവറ്റ് കമ്മ്യൂണിറ്റിയിലേക്ക് കൃത്യമായ മാനദണ്ഡങ്ങളോടെയാണ് അംഗങ്ങളെ ചേർക്കുന്നത്. ഒത്തൊരുമയോടെ പുതിയ അറിവുകൾ പങ്കുവെക്കാനും പരസ്പരം പിന്തുണയ്ക്കാനും ആഗ്രഹിക്കുന്നവർക്ക് ഇതൊരു മികച്ച പ്ലാറ്റ്‌ഫോമാണ്.</p>
+            </div>
+
+            <!-- Age Restriction Box -->
+            <div class="criteria-box">
+                <span>🔞</span>
+                <p><strong>Age Restriction:</strong> കർശനമായ സുരക്ഷാ മാനദണ്ഡങ്ങൾ കാരണം <strong>21 വയസ്സിന് മുകളിൽ പ്രായമുള്ളവർക്ക്</strong> മാത്രമാണ് ഈ ക്ലബ്ബിലേക്ക് പ്രവേശനം.</p>
+            </div>
             
             <div class="pricing-flex">
                 <div class="price-card highlight">
@@ -299,7 +340,7 @@
         <div class="section-box">
             <div class="grid-2">
                 <div>
-                    <span class="badge" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-blue);">Card Holders Privilege</span>
+                    <span class="badge" style="background: rgba(56, 189, 248, 0.12); color: var(--accent-blue);">Card Holders Privilege</span>
                     <h2>Meta Quest 3 Lucky Draw & 2027 Roadmap</h2>
                     <p>
                         <strong>Exclusive for Card Holders:</strong> Lucky draws and exciting rewards are exclusively available <em>only to members who possess a valid digital membership card</em>.
@@ -318,7 +359,7 @@
         <div class="section-box">
             <div class="grid-2">
                 <div>
-                    <span class="badge" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green);">Digital Credentials</span>
+                    <span class="badge" style="background: rgba(16, 185, 129, 0.12); color: var(--accent-green);">Digital Credentials</span>
                     <h2>Closed Community & Digital Membership Card</h2>
                     <p>
                         This is a strict closed community designed for quality interactions and professional networking. You are welcome to bring your trusted friends and colleagues into the fold. Connect directly with our network using your official digital membership card.
